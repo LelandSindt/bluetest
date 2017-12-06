@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      label 'docker'
+      image 'alpine'
+    }
+  }
   stages {
     stage('Build') {
       steps {
