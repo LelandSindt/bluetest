@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Deploy') {
       when {
-        branch 'something-master'    //only run these steps on the master branch
+        branch 'master'    //only run these steps on the master branch
       }
       steps {
         input(message: 'continue?')
