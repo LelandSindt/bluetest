@@ -12,9 +12,6 @@ pipeline {
                 sh 'echo "hello stage 3"'
             }
             steps {
-                input "Continue?"
-            }
-            steps {
                 sh 'echo "woot"'
             }
         }
