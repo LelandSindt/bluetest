@@ -4,7 +4,8 @@ pipeline {
     stage('Build') {
       steps {
         sh 'echo "Hello World"'
-        input(message: 'continue?', id: '123', ok: 'ok')
+        input(message: 'continue?')
+        sh 'echo "continued"'
       }
     }
   }
