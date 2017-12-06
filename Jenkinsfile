@@ -7,25 +7,5 @@ pipeline {
                 sh 'echo "Hello World"'
             }
         }
-        stage('Stage Two') {
-            steps {
-                sh 'echo "hello stage 2"'
-            }
-        }
-        
-        stage('Stage Three') {
-            when {
-                branch 'master'    //only run these steps on the master branch
-            }
-            steps {
-                sh 'echo "hello stage 3"'
-            }
-            steps {
-                input "Continue?"
-            }
-            steps {
-                sh 'echo "woot"'
-            }
-        }
     }
 }
