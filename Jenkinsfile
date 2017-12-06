@@ -8,9 +8,6 @@ pipeline {
             }
         }
         stage('Stage Three') {
-            when {
-                branch 'master'    //only run these steps on the master branch
-            }
             steps {
                 sh 'echo "hello stage 3"'
             }
