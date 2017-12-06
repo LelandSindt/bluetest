@@ -1,9 +1,16 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    state('Build') {
       steps {
-        sh 'echo "Hello World"'
+        sh 'echo "Build"'
+      }
+    }
+    stage('Deploy') {
+      when {
+        branch 'master'
+      }
+      steps {
         input(message: 'continue?')
         sh 'echo "continued"'
       }
