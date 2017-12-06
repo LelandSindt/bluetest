@@ -7,6 +7,9 @@ pipeline {
       }
     }
     stage('Deploy') {
+      when {
+        branch 'master'    //only run these steps on the master branch
+      }
       steps {
         input(message: 'continue?')
         sh 'echo "continued"'
